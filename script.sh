@@ -11,6 +11,6 @@ python post_processing/main.py $curr_dir "./result.jpg"
 
 mask_url=$(curl -v -X POST "http://upload-hack.photolab.me/upload.php" -F file1=@./result.jpg -F no_resize=1)
 
-new_img=$(curl -v -X POST "http://api-hack.photolab.me/photolab_process.php" -F image_url[1]=${out_url}, image_url[1]=${mask_url} -F template_name="A5A9EDED-DD45-49F4-957A-EA81145ED0C5")
+new_img=$(curl -v -X POST "http://api-hack.photolab.me/photolab_process.php" -F image_url[1]=${out_url} -F template_name="C439A24F-69A3-8CD4-096B-2C795F15CDB9")
 
-echo $new_img > out.txt
+#echo $new_img > out.txt
