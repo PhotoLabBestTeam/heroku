@@ -19,6 +19,15 @@ $def with (name, path)
 </head>
 <body>
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v3.1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <h1><div style="text-align: center;">PhotoLab Application</div></h1>
 
 <div class="all">
@@ -36,6 +45,8 @@ $def with (name, path)
     <center>
     <img id="blah" src="$path" alt="your image" width="500" />
     <img id="img" src="$name" alt="your image" width="500"/>
+        <br>
+        <div class="fb-share-button" data-href="$name" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhackathon.photolab.me%2Fsamples%2Fgirl.jpg&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Поделиться</a></div>
     </center>
 </form>
 
