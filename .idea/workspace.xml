@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ce9f694-f20a-4739-b703-81a19dffb6e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/post_processing/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post_processing/.style.yapf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post_processing/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post_processing/FromFile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post_processing/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post_processing/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post_processing/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post_processing/WebCam.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post_processing/docs/assets/demo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post_processing/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post_processing/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post_processing/sample/origin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post_processing/setup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post_processing/skin_detector/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post_processing/skin_detector/scripts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post_processing/skin_detector/skin_detector.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.sh" beforeDir="false" afterPath="$PROJECT_DIR$/script.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,13 +23,13 @@
           <entry key="LICENSE" value="1" />
           <entry key="Makefile" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="1" />
+          <entry key="html" value="2" />
           <entry key="jpeg" value="1" />
-          <entry key="jpg" value="4" />
+          <entry key="jpg" value="6" />
           <entry key="md" value="1" />
           <entry key="png" value="1" />
           <entry key="py" value="10" />
-          <entry key="sh" value="2" />
+          <entry key="sh" value="3" />
           <entry key="txt" value="2" />
           <entry key="xml" value="1" />
           <entry key="yapf" value="2" />
@@ -55,9 +38,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Bash" value="2" />
-          <entry key="HTML" value="1" />
-          <entry key="Image" value="6" />
+          <entry key="Bash" value="3" />
+          <entry key="HTML" value="2" />
+          <entry key="Image" value="8" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="7" />
           <entry key="Python" value="10" />
@@ -69,12 +52,12 @@
         <counts>
           <entry key="html" value="18" />
           <entry key="py" value="61" />
-          <entry key="sh" value="210" />
+          <entry key="sh" value="229" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Bash" value="210" />
+          <entry key="Bash" value="229" />
           <entry key="HTML" value="18" />
           <entry key="Python" value="61" />
         </counts>
@@ -85,63 +68,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/post_processing/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-              <folding>
-                <element signature="e#27#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/post_processing/setup.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="41" column="81" selection-start-line="41" selection-start-column="81" selection-end-line="41" selection-end-column="81" />
-              <folding>
-                <element signature="e#0#17#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/t1.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/runtime.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/script.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/middle.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/result.jpg">
           <provider selected="true" editor-type-id="images" />
@@ -156,13 +82,18 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/post_processing/skin_detector/skin_detector.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/script.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="128" selection-start-line="128" selection-end-line="128" />
+            <state relative-caret-position="135">
+              <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/middle.jpg">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -208,6 +139,11 @@
               <item name="heroku" type="b2602c69:ProjectViewProjectNode" />
               <item name="heroku" type="462c0819:PsiDirectoryNode" />
               <item name="post_processing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="heroku" type="b2602c69:ProjectViewProjectNode" />
+              <item name="heroku" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="heroku" type="b2602c69:ProjectViewProjectNode" />
@@ -391,25 +327,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="41" column="81" selection-start-line="41" selection-start-column="81" selection-end-line="41" selection-end-column="81" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/t1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runtime.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/middle.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/post_processing/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -427,6 +344,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/runtime.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/t1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="41" column="81" selection-start-line="41" selection-start-column="81" selection-end-line="41" selection-end-column="81" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/middle.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/result.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -439,8 +375,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/script.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        <state relative-caret-position="135">
+          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
         </state>
       </provider>
     </entry>

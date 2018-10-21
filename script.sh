@@ -6,3 +6,5 @@ curl $out_url > "static/middle.jpg"
 curr_dir=$(pwd)"/static/middle.jpg"
 
 python post_processing/main.py $curr_dir $(pwd)"/static/result.jpg"
+
+echo $(pwd)"/static/result.jpg" > out.txt
