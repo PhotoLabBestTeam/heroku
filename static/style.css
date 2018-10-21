@@ -1,0 +1,53 @@
+body {
+    font-family: Century Gothic;
+    background-image: url(01.jpg);
+    background-color: #4B0082;
+    background-position: center center;
+    background-attachment: fixed;
+    color: #4B0082;
+}
+
+h1 {
+    color: #FFFFE0;
+    width: 50%;
+    margin: 20px auto;
+    font-size: 50px;
+}
+
+div, img {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+a {
+    text-decoration: none;
+    color: #4B0082;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #4B0082;
+}
+
+.all {
+    width: 50%;
+    height: 150px;
+    margin: 0px 170px;
+}
+
+.about {
+    float: left;
+    width: 30%;
+    height: auto;
+}
+
+.name {
+    width: 100%;
+}
+
+.introduction {
+    width: auto;
+    height: 100%;
+}
