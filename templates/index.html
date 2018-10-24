@@ -1,56 +1,98 @@
-$def with (name, path)
 <html>
 <head>
     <meta charset="utf-8">
-    <title>My CV</title>
-    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <title>PhotoLab ClothesSegments</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
 
-    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
-    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
-    <script src="../static/main.js"></script>
-    <!--[if IE]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <style>
-        article, aside, figure, footer, header, hgroup,
-        menu, nav, section { display: block; }
-    </style>
 </head>
 <body>
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v3.1';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+        <header>
+            <div class="container">
+                <div class="top">
+                    <a href="" class="logo"><!-- PhotoLab -->
+                        <div id="PhLab1">
+                            <img src="/static/PhLab1.jpg" width="100" height="100" alt="PhLab1" />
+                        </div>
+                    </a>
 
-<h1><div style="text-align: center;">PhotoLab Application</div></h1>
+                    <!--<div class="text_top">
+                        <p>CLOTHES EDITOR</p>
+                    </div>
 
-<div class="all">
+    <!--
+                    <nav>
+                        <ul>
+                            <li><a href="">Главная</a></li>
+                            <li><a href="">О нас</a></li>
+                            <li><a href="">Контакты</a></li>
+                        </ul>
+                    </nav>-->
 
-    <div class="about">
-        <p class="big"><u><a>Draw Segments</a></u></p></div>
-        <div class="introduction"> You can segment parts of your clothes, ice cream in your hand,
-            or whatever you want, and transform it in a picture </div>
-    </div>
-
-<form enctype="multipart/form-data" method="post" action="">
-    <input type='file' onchange="readURL(this);" name="myfile" />
-    <input type="submit" value="uploadfile" />
-    <br>
-    <center>
-    <img id="blah" src="$path" alt="your image" width="500" />
-    <img id="img" src="$name" alt="your image" width="500"/>
-        <br>
-        <div class="fb-share-button" data-href="$name" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhackathon.photolab.me%2Fsamples%2Fgirl.jpg&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Поделиться</a></div>
-    </center>
-</form>
+                </div>
+            </div>
+        </header>
 
 
-</div>
+        <div class="container">
+            <ul class="menu-main">
+                <li><a href="" class="current">Cartoon style</a></li>
+                <li><a href="">Pop art</a></li>
+                <li><a href="">Pencil</a></li>
+                <li><a href="">Gradient</a></li>
+            </ul>
+        </div>
+
+
+        <div class="main">
+            <div class="container">
+                <form enctype="multipart/form-data" method="post" action="">
+
+                    <div class="row">
+                        <div class="buttom_choose_file">
+                            <!-- TODO: replace a with input & fix style -->
+                            <a href="">Выберите файл
+                            <input type='file' name="input_img" value="Выберите файл" /></a>
+                        </div>
+                        <div class="col-2-3">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-1-2">
+                            <div class="buttom_choose_file">
+                                <!-- TODO: replace a with input & fix style -->
+                                <a href="">Применить фильтр
+                                <input type="submit" value="Применить фильтр" /></a>
+                            </div>
+                        </div>
+                        <div class="col-1-2">
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1-4">
+
+                        </div>
+                        <div class="col-1-4">
+                            <p></p>
+                        </div>
+                        <div class="col-1-2">
+                            <p></p>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <p></p>
+            </div>
+        </footer>
+
+
 </body>
 </html>
