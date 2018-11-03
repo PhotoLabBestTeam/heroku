@@ -8,63 +8,54 @@ urls = (
 )
 render = web.template.render('templates/')
 
+app = web.application(urls, globals())
+
+if web.config.get('_session') is None:
+    session = web.session.Session(app, web.session.DiskStore('sessions'))
+    web.config._session = session
+else:
+    session = web.config._session
+
 class index:
     def GET(self):
         return render.index()
 
     def POST(self):
         x = web.input(input_img={})
-        filedir = 'static'
+        filedir = 'static/session_imgs'
 
         assert 'input_img' in x
-        filepath = x.input_img.filename.replace('\\', '/')
-        filename = filepath.split('/')[-1]
+        filename = session.session_id
         fout = open(filedir + '/' + filename, 'w')
         fout.write(x.input_img.file.read())
         fout.close()
 
-        f1 = open("in.txt", "w+")
-        f1.write(filedir + '/' + filename)
-        f1.close()
-
-        subprocess.call("bash script.sh " + filedir + '/' + filename, shell=True)
-
+        after = subprocess.check_output(["bash", "script.sh", filedir + '/' + filename])
+        session['before'] = filedir + '/' + filename
+        session['after'] = after
         raise web.seeother('/result')
 
 
 class result:
     def GET(self):
-        f = open("out.txt", "r")
-        after = f.read()
-        f.close()
-        if after is None or len(after) < 1:
-            after = "http://placehold.it/300x400"
-        f1 = open("in.txt", "r")
-        before = f1.read()
-        f1.close()
-        if before is None or len(before) < 1:
-            before = "http://placehold.it/300x400"
-        return render.result(before, after)
+        return render.result(session['before'], session['after'])
 
     def POST(self):
         x = web.input(input_img={})
-        filedir = 'static'  # change this to the directory you want to store the file in.
-        if 'input_img' in x:  # to check if the file-object is created
-            filepath = x.input_img.filename.replace('\\', '/')  # replaces the windows-style slashes with linux ones.
-            filename = filepath.split('/')[-1]  # splits the and chooses the last part (the filename with extension)
-            fout = open(filedir + '/' + filename, 'w')  # creates the file where the uploaded file should be stored
-            fout.write(x.input_img.file.read())  # writes the uploaded file to the newly created file.
-            fout.close()  # closes the file, upload complete.
-        f1 = open("in.txt", "w+")
-        f1.write(filedir + '/' + filename)
-        before = filedir + '/' + filename
-        f1.close()
+        filedir = 'static/session_imgs'
 
-        after = subprocess.check_output(["bash", "script.sh",  filedir + '/' + filename])
+        assert 'input_img' in x
+        filename = session.session_id
+        fout = open(filedir + '/' + filename, 'w')
+        fout.write(x.input_img.file.read())
+        fout.close()
 
-        return render.result(before, after)
+        after = subprocess.check_output(["bash", "script.sh", filedir + '/' + filename])
+        session['before'] = filedir + '/' + filename
+        session['after'] = after
+
+        return render.result(session['before'], session['after'])
 
 
 if __name__ == "__main__":
-    app = web.application(urls, globals())
     app.run()
