@@ -1,29 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ce9f694-f20a-4739-b703-81a19dffb6e9" name="Default Changelist" comment="replace resources">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="2ce9f694-f20a-4739-b703-81a19dffb6e9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static/session_imgs/empty" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/girl.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/in.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.sh" beforeDir="false" afterPath="$PROJECT_DIR$/script.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/download.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/middle.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/olya.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/ph.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/selfie.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/t1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/t4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/t5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/t6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/t7.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/t7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/t8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/t9.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,26 +23,29 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="empty" value="4" />
           <entry key="html" value="283" />
           <entry key="py" value="387" />
           <entry key="sh" value="18" />
-          <entry key="txt" value="19" />
+          <entry key="txt" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Bash" value="18" />
           <entry key="HTML" value="283" />
-          <entry key="PLAIN_TEXT" value="19" />
+          <entry key="PLAIN_TEXT" value="35" />
           <entry key="Python" value="387" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="3a9613dace37e0a343540c0784b2a1241ebb5e93" value="3" />
+          <entry key="96a49d559093208e54972e21bb5f72e999df2525" value="1" />
           <entry key="Procfile" value="1" />
           <entry key="af9670de85b77804021b1270646c6f1a06b9c90f" value="1" />
           <entry key="css" value="2" />
+          <entry key="empty" value="1" />
           <entry key="html" value="4" />
           <entry key="jpeg" value="2" />
           <entry key="jpg" value="20" />
@@ -83,7 +66,7 @@
           <entry key="Image" value="23" />
           <entry key="JavaScript" value="2" />
           <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="12" />
+          <entry key="PLAIN_TEXT" value="14" />
           <entry key="Python" value="12" />
           <entry key="PythonStub" value="1" />
         </counts>
@@ -94,14 +77,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="49" column="16" lean-forward="true" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
+            <state relative-caret-position="108">
+              <caret line="27" column="37" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="37" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/session_imgs/empty">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="4" selection-start-column="4" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -182,6 +174,7 @@
         <option value="$PROJECT_DIR$/templates/result.html" />
         <option value="$PROJECT_DIR$/server.py" />
         <option value="$PROJECT_DIR$/script.sh" />
+        <option value="$PROJECT_DIR$/static/session_imgs/empty" />
       </list>
     </option>
   </component>
@@ -216,6 +209,12 @@
               <item name="heroku" type="b2602c69:ProjectViewProjectNode" />
               <item name="heroku" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="heroku" type="b2602c69:ProjectViewProjectNode" />
+              <item name="heroku" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="session_imgs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="heroku" type="b2602c69:ProjectViewProjectNode" />
@@ -322,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540412060913</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add sessions">
+      <created>1541285944417</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1541285944417</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -336,8 +342,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18426362" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18426362" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -350,7 +357,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32885906" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.504698" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.504698" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.32885906" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="13" />
@@ -400,19 +407,10 @@
     </ignored-roots>
     <MESSAGE value="up" />
     <MESSAGE value="replace resources" />
-    <option name="LAST_COMMIT_MESSAGE" value="replace resources" />
+    <MESSAGE value="add sessions" />
+    <option name="LAST_COMMIT_MESSAGE" value="add sessions" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/post_processing/skin_detector/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/post_processing/skin_detector/skin_detector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/result.jpg" />
     <entry file="file://$PROJECT_DIR$/post_processing/setup.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -630,13 +628,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sessions/96a49d559093208e54972e21bb5f72e999df2525">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="49" column="16" lean-forward="true" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
+        <state relative-caret-position="108">
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="37" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/session_imgs/empty">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>
