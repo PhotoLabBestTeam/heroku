@@ -4,7 +4,8 @@ import web
 
 urls = (
     '/', 'index',
-    '/result', 'result'
+    '/result', 'result',
+    '/favicon.ico', 'icon'
 )
 render = web.template.render('templates/')
 
@@ -55,6 +56,11 @@ class result:
         session['after'] = after
 
         return render.result(session['before'], session['after'])
+
+
+class icon:
+    def GET(self):
+        raise web.seeother("/static/favicon.ico")
 
 
 if __name__ == "__main__":
