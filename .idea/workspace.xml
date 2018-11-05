@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2ce9f694-f20a-4739-b703-81a19dffb6e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/static/favicon.ico" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,9 +27,9 @@
           <entry key="css" value="42" />
           <entry key="empty" value="4" />
           <entry key="html" value="503" />
-          <entry key="py" value="1104" />
+          <entry key="py" value="1129" />
           <entry key="sh" value="20" />
-          <entry key="txt" value="132" />
+          <entry key="txt" value="153" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -37,8 +37,8 @@
           <entry key="Bash" value="20" />
           <entry key="CSS" value="42" />
           <entry key="HTML" value="503" />
-          <entry key="PLAIN_TEXT" value="136" />
-          <entry key="Python" value="1104" />
+          <entry key="PLAIN_TEXT" value="157" />
+          <entry key="Python" value="1129" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -60,7 +60,7 @@
           <entry key="empty" value="1" />
           <entry key="f8997cd40475f60cbd0eb4036bbac03acad673c5" value="1" />
           <entry key="html" value="12" />
-          <entry key="ico" value="3" />
+          <entry key="ico" value="4" />
           <entry key="jpeg" value="2" />
           <entry key="jpg" value="22" />
           <entry key="js" value="4" />
@@ -77,7 +77,7 @@
           <entry key="Bash" value="4" />
           <entry key="CSS" value="5" />
           <entry key="HTML" value="12" />
-          <entry key="Image" value="30" />
+          <entry key="Image" value="31" />
           <entry key="JavaScript" value="4" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="27" />
@@ -91,18 +91,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="61" column="16" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
+            <state relative-caret-position="258">
+              <caret line="70" column="18" lean-forward="true" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
-                <marker date="1541450940210" expanded="true" signature="109:517" ph="..." />
-                <marker date="1541450940210" expanded="true" signature="1064:1115" ph="..." />
+                <marker date="1541451128305" expanded="true" signature="109:517" ph="..." />
+                <marker date="1541451128305" expanded="true" signature="1064:1115" ph="..." />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/favicon.ico">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -154,15 +159,6 @@
               <folding>
                 <element signature="e#1703#1751#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/lib/python2.7/sched.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -267,12 +263,6 @@
               <item name="heroku" type="b2602c69:ProjectViewProjectNode" />
               <item name="heroku" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="heroku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="heroku" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="session_imgs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="heroku" type="b2602c69:ProjectViewProjectNode" />
@@ -512,7 +502,21 @@
       <option name="project" value="LOCAL" />
       <updated>1541439960633</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="check for correctness">
+      <created>1541451020468</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1541451020468</updated>
+    </task>
+    <task id="LOCAL-00010" summary="check for correctness">
+      <created>1541451136609</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1541451136609</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -526,7 +530,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19233356" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -597,7 +600,8 @@
     <MESSAGE value="merge with olya" />
     <MESSAGE value="add 4 templates" />
     <MESSAGE value="add cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="add cleanup" />
+    <MESSAGE value="check for correctness" />
+    <option name="LAST_COMMIT_MESSAGE" value="check for correctness" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/session_imgs/3a9613dace37e0a343540c0784b2a1241ebb5e93t8.jpg" />
@@ -636,9 +640,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/PhLab1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/favicon.ico">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/tokenize.py">
@@ -835,15 +836,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="61" column="16" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
+        <state relative-caret-position="258">
+          <caret line="70" column="18" lean-forward="true" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
-            <marker date="1541450940210" expanded="true" signature="109:517" ph="..." />
-            <marker date="1541450940210" expanded="true" signature="1064:1115" ph="..." />
+            <marker date="1541451128305" expanded="true" signature="109:517" ph="..." />
+            <marker date="1541451128305" expanded="true" signature="1064:1115" ph="..." />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/favicon.ico">
+      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
 </project>
