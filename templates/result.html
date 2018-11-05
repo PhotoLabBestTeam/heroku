@@ -1,4 +1,4 @@
-$def with (before, after)
+$def with (before, after, hidden)
 <html xmlns:display="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
@@ -26,10 +26,10 @@ $def with (before, after)
                     <table width="100%">
                         <tr>
                             <td>
-                                <img src="$before" width="100%" alt="example_pic_do" />
+                                <img $hidden src="$before" width="100%" alt="example_pic_do" />
                             </td>
                             <td>
-                                <img src="$after" width="100%" alt="example_pic_posle" />
+                                <img $hidden src="$after" width="100%" alt="example_pic_posle" />
                             </td>
                         </tr>
                     </table>

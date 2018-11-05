@@ -45,7 +45,7 @@ class filters:
 
 class result:
     def GET(self, name):
-        return render.result(session['before'], session['after'])
+        return render.result(session['before'], session['after'], "hidden")
 
     def POST(self, name):
         x = web.input(input_img={})
@@ -64,7 +64,7 @@ class result:
         else:
             session['after'] = '/static/PhLab1.jpg'
 
-        return render.result(session['before'], session['after'])
+        return render.result(session['before'], session['after'], "")
 
 
 class icon:
