@@ -59,7 +59,8 @@ class result:
 
         after = subprocess.check_output(["bash", "script.sh", filedir + '/' + filename, name])
         session['before'] = filedir + '/' + filename
-        session['after'] = after
+        if after.startswith('http'):
+            session['after'] = after
 
         return render.result(session['before'], session['after'])
 
