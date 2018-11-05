@@ -56,7 +56,7 @@ class result:
         fout.write(x.input_img.file.read())
         fout.close()
 
-        after = subprocess.check_output(["bash", "script.sh", filedir + '/' + filename])
+        after = subprocess.check_output(["bash", "script.sh", filedir + '/' + filename, name])
         session['before'] = filedir + '/' + filename
         session['after'] = after
 
