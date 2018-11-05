@@ -4,7 +4,7 @@ $def with (before, after)
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="/static/favicon.ico">
     <title>PhotoLab ClothesSegments</title>
-    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/style_old.css">
 
 </head>
 <body>
@@ -63,7 +63,7 @@ $def with (before, after)
             <div class="col-1-2">
                 <div class="buttom_choose_file" style="text-align: center;">
                     <a href="">Выберите файл
-                    <input type='file' name="input_img" value="Выберите файл" /></a>
+                    <input type='file' onchange="this.form.submit()" name="input_img" value="Выберите файл" /></a>
                 </div>
             </div>
         </div>
@@ -88,12 +88,6 @@ $def with (before, after)
                     <div style="text-align: center;">
                         <a href="" class="buttom_try_filter">Готово!</a>
                     </div>
-                </div>
-
-
-                <div class="buttom_try_filter" onclick="show('block')" style="text-align: center;">
-                    <a>Применить фильтр
-                    <input type="submit" value="Применить фильтр" /></a>
                 </div>
             </div>
             <div class="col-1-4">

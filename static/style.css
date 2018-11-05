@@ -1,290 +1,85 @@
-body {
-    font-family: Century Gothic;
-    /*background-image: url(01.jpg);*/
-    background-color: white;
-    background-position: center center;
-    background-attachment: fixed;
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    /*font: 100%/1.5em Arial, Helvetica, sans-serif; /* 100% = 16px 1.5em - высота между строками */
     color: black;
 }
 
-h1 {
-    color: white;
-    width: 50%;
-    margin: 20px auto;
-    font-size: 50px;
+table {
+    margin: auto;
 }
 
-div, img {
-    /*margin: 10px;*/
-    /*padding: 10px;
-    border-radius: 10px;*/
+/*  flexible media  */
 
+article, aside, details, figcaption, figure, footer, hgroup, menu, nav, section {
+    display: block;
 }
-
-a {
-    text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-}
-
-a:hover {
-}
-
-.all {
-    width: 50%;
-    height: 150px;
-    margin: 0px 170px;
-}
-
-.about {
-    float: left;
-    width: 30%;
+img {
+    max-width: 100%;
     height: auto;
 }
 
-.name {
-    width: 100%;
-}
 
-.introduction {
-    width: auto;
-    height: 100%;
-}
-
-.container {
+/*.container {
     width: 100%;
-    max-width: 1024px; /*максимальная ширина может иметь другое значение*/
-    /*height: 50px;*/
-    padding: 0 15px;
     margin: 0 auto;
-    background: floralwhite; /* Для старых браузров */
-    /*background: repeating-linear-gradient(130deg, deeppink, blueviolet, darkslateblue);*/
-    padding: 10px;
-}
+    background: #d2d2d2;
+}*/
 
-.top {
-    /*float: left;*/
-    color: white;
-    background: repeating-linear-gradient(130deg, deeppink, blueviolet, darkslateblue);
-    padding: 10px;
-}
-
-@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
-
-.text_top {
-    font-size: 30px;
-    font-family: 'Ubuntu Condensed', sans-serif;
-    letter-spacing: 2px;
-    font-size: 27px;
-    text-transform: uppercase;
-}
-
-nav {
-    float: right;
-    color: white;
-}
-
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    color: white;
-}
-nav li {
-    display: inline-block; /*один из способов разместить элементы в строку*/
-    color: white;
-}
-
-.container:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-.container:after, .row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.row {
-    margin-bottom: 15px;
-}
-
-.menu-main {
-    list-style: none;
-    margin: 0px 0 5px;
-    padding: 25px 0 5px;
-    text-align: center;
+.container .cols {
+    float: left;
+    margin: 0 0 1em;
+    padding: 0 1em;
     background: white;
-}
-.menu-main li {display: inline-block;}
-.menu-main li:after {
-    content: "|";
-    color: floralwhite;
-    display: inline-block;
-    vertical-align:top;
-}
-.menu-main li:last-child:after {content: none;}
-.menu-main a {
-    text-decoration: none;
-    font-family: 'Ubuntu Condensed', sans-serif;
-    letter-spacing: 2px;
-    position: relative;
-    padding-bottom: 20px;
-    margin: 0 34px 0 30px;
-    font-size: 27px;
-    text-transform: uppercase;
-    display: inline-block;
-    transition: color .2s;
-}
-.menu-main a, .menu-main a:visited {color: grey;}
-.menu-main a.current{color: darkslateblue;}
-.menu-main a:hover{color: deeppink;}
-.menu-main a:before{
-    content: "";
-    position: absolute;
-    height: 4px;
-    top: auto;
-    right: 50%;
-    bottom: -5px;
-    left: 50%;
-    background: repeating-linear-gradient(130deg, deeppink, blueviolet, darkslateblue);
-    transition: .8s;
+    text-align: center;
 }
 
-.menu-main a:after {
+.container .cols.col-1 {width: 8.333333333333333%}
+.container .cols.col-2 {width: 16.66666666666667%;}
+.container .cols.col-3 {width: 25%;}
+.container .cols.col-4 {width: 33.33333333333333%;}
+.container .cols.col-5 {width: 41.66666666666667%;}
+.container .cols.col-6 {width: 50%;}
+.container .cols.col-7 {width: 58.33333333333333%;}
+.container .cols.col-8 {width: 66.66666666666667%;}
+.container .cols.col-9 {width: 75%;}
+.container .cols.col-10 {width: 83.33333333333333%;}
+.container .cols.col-11 {width: 91.66666666666666%;}
+.container .cols.col-12 {width: 100%;}
+
+.container:before,
+.container:after,
+.row:before,
+.row:after,
+.clear:before,
+.clear:after {
     content: "";
-    position: absolute;
-    height: 4px;
-    top: auto;
-    right: 50%;
-    bottom: -5px;
-    left: 50%;
-    background: repeating-linear-gradient(130deg, darkslateblue, blueviolet, deeppink);
-    transition: .8s;
+    display: table;
 }
-.menu-main a:hover:before, .menu-main .current:before {left: 0;}
-.menu-main a:hover:after, .menu-main .current:after {right: 0;}
-/*@media (max-width: 550px) {
-    .menu-main {padding-top: 0;}
-    .menu-main li {display: block;}
-    .menu-main li:after {content: none;}
-    .menu-main a {
-        padding: 25px 0 20px;
-        margin: 0 30px;
+.row:after,
+.clear:after {
+    clear: both;
+}
+@media screen and (max-width: 320px) {
+    h1{
+        color: aqua;
     }
-}*/
-
-.buttom_try_filter a {
-    text-decoration: none;
-    outline: none;
-    position: center;
-    text-align: center;
-    display: inline-block;
-    padding: 12px 40px;
-    /*margin: 10px 20px;*/
-    border-radius: 10px;
-    background-image: linear-gradient(45deg, darkslateblue 0%, blueviolet 50%, deeppink 100%);
-    background-position: 100% 0;
-    background-size: 200% 200%;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    color: white;
-    /*box-shadow: 0 16px 32px 0 rgba(0,40,120,.35);*/
-    transition: .5s;
-    width: 150px;
+    .container .cols.col-1,
+    .container .cols.col-2,
+    .container .cols.col-3,
+    .container .cols.col-4,
+    .container .cols.col-5,
+    .container .cols.col-6,
+    .container .cols.col-7,
+    .container .cols.col-8,
+    .container .cols.col-9,
+    .container .cols.col-10,
+    .container .cols.col-11,
+    .container .cols.col-12 {width: 100%;}
 }
-.buttom_try_filter a:hover {
-    box-shadow: 0 0 0 0 rgba(0,40,120,0);
-    background-position: 0 0;
-}
-
-.buttom_choose_file a {
-    position: center;
-    text-decoration: none;
-    outline: none;
-    text-align: center;
-    display: inline-block;
-    padding: 12px 40px;
-    border-radius: 10px;
-    background-image: linear-gradient(45deg, darkslateblue 0%, blueviolet 50%, deeppink 100%);
-    background-position: 100% 0;
-    background-size: 200% 200%;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    color: white;
-    /*box-shadow: 0 16px 32px 0 rgba(0,40,120,.35);*/
-    transition: .5s;
-    width: 150px;
-}
-.buttom_choose_file a:hover {
-    box-shadow: 0 0 0 0 rgba(0,40,120,0);
-    background-position: 0 0;
-}
-
-/*
-.parent_popup {
-    background: #000;
-    height: 100%;
-    opacity: 0.5;
-    position: fixed;
-    width: 100%;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    color: black;
-}
-
-.popup{
-    position: relative }
-.popup p {
-    height: 500px;
-    width: 900px;
-    opacity: 1.0;
-    padding: 100px;
-    background: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-}*/
-
-#wrap{
-    display: none;
-    opacity: 0.9;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    padding: 16px;
-    background-color: rgba(1, 1, 1, 0.725);
-    z-index: 100;
-    overflow: auto;
-}
-
-#window{
-    width: 900px;
-    height: 600px;
-    margin: 50px auto;
-    display: none;
-    background: #fff;
-    z-index: 200;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    padding: 16px;
-}
-
-.close{
-    position: absolute;
-    top: 0;
-    right: 0;
-    cursor: pointer;
-}
-
