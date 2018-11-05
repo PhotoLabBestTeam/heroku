@@ -1,6 +1,21 @@
 import subprocess
 
 import web
+import os
+import os.path
+import time
+
+class MyDiskStore(web.session.DiskStore):
+    def cleanup(self, timeout):
+        now = time.time()
+        for f in os.listdir(self.root):
+            path = self._get_path(f)
+            atime = os.stat(path).st_atime
+            if now - atime > timeout :
+                os.remove(path)
+                img_path = 'static/session_imgs/' + path.split("/")[-1]
+                if os.path.isfile(img_path):
+                    os.remove(img_path)
 
 urls = (
     '/', 'index',
@@ -12,8 +27,10 @@ render = web.template.render('templates/')
 
 app = web.application(urls, globals())
 
+web.config.session_parameters.timeout = 600
+web.config.session_parameters.ignore_expiry = False
 if web.config.get('_session') is None:
-    session = web.session.Session(app, web.session.DiskStore('sessions'), {'before': '/static/PhLab1.jpg', 'after': '/static/PhLab1.jpg'})
+    session = web.session.Session(app, MyDiskStore('sessions'), {'before': '/static/PhLab1.jpg', 'after': '/static/PhLab1.jpg'})
     web.config._session = session
 else:
     session = web.config._session
@@ -25,22 +42,6 @@ class index:
 class filters:
     def GET(self):
         return render.filters()
-
-    def POST(self):
-        x = web.input(input_img={})
-        filedir = 'static/session_imgs'
-
-        assert 'input_img' in x
-        filename = session.session_id
-        fout = open(filedir + '/' + filename, 'w')
-        fout.write(x.input_img.image.read())
-        fout.close()
-
-        after = subprocess.check_output(["bash", "script.sh", filedir + '/' + filename])
-        session['before'] = filedir + '/' + filename
-        session['after'] = after
-        raise web.seeother('/result')
-
 
 class result:
     def GET(self, name):
