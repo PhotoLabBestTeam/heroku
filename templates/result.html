@@ -9,37 +9,11 @@ $def with (before, after)
 </head>
 <body>
 
-<!-- Script for FB button -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v3.1';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+
 
 <header>
-    <div class="container">
-        <div class="top">
-            <div href="" class="logo"><!-- PhotoLab -->
-                <div id="PhLab1">
-                    <img src="/static/PhLab1.jpg" width="100" height="100" alt="PhLab1" />
-                </div>
-            </div>
-        </div>
-    </div>
+
 </header>
-
-
-<div class="container">
-    <ul class="menu-main">
-        <li><a href="" class="current">Cartoon style</a></li>
-        <li><a href="">Pop art</a></li>
-        <li><a href="">Pencil</a></li>
-        <li><a href="">Gradient</a></li>
-    </ul>
-</div>
 
 
 <div class="main">
@@ -48,8 +22,24 @@ $def with (before, after)
             <div class="pictures">
                 <div id="example" style="text-align: center;">
                     <div class="fb-share-button" data-href="$after" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhackathon.photolab.me%2Fsamples%2Fgirl.jpg&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Поделиться</a></div>
-                    <img src="$before" width="505" height="665" alt="example_pic_do" />
-                    <img src="$after" width="505" height="665" alt="example_pic_posle" />
+
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                <img src="$before" width="100%" alt="example_pic_do" />
+                            </td>
+                            <td>
+                                <img src="$after" width="100%" alt="example_pic_posle" />
+                            </td>
+                        </tr>
+                    </table>
+
+
+
+
+
+
+
                 </div>
             </div>
         </div>
@@ -64,32 +54,24 @@ $def with (before, after)
                 <div class="buttom_choose_file" style="text-align: center;">
                     <a href="">Выберите файл
                     <input type='file' onchange="this.form.submit()" name="input_img" value="Выберите файл" /></a>
+
+                    <!-- Script for FB button -->
+                    <div id="fb-root"></div>
+                    <script>(function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s); js.id = id;
+                        js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v3.1';
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));</script>
+
+
                 </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-1-4">
-                <script type="text/javascript">
-                    //Функция показа
-                    function show(state){
-                        document.getElementById('window').style.display = state;
-                        document.getElementById('wrap').style.display = state;
-                    }
-                </script>
 
-                <!-- Задний прозрачный фон-->
-                <div onclick="show('none')" id="wrap"></div>
-                <!-- Само окно-->
-                <div id="window">
-                    <!-- Картинка крестика-->
-                    <img class="close" onclick="show('none')" src="http://sergey-oganesyan.ru/wp-content/uploads/2014/01/close.png">
-
-                    <div style="text-align: center;">
-                        <a href="" class="buttom_try_filter">Готово!</a>
-                    </div>
-                </div>
-            </div>
             <div class="col-1-4">
                 <p></p>
             </div>
