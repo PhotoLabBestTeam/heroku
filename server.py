@@ -61,6 +61,8 @@ class result:
         session['before'] = filedir + '/' + filename
         if after.startswith('http'):
             session['after'] = after
+        else:
+            session['after'] = '/static/PhLab1.jpg'
 
         return render.result(session['before'], session['after'])
 
