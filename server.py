@@ -27,8 +27,8 @@ render = web.template.render('templates/')
 
 app = web.application(urls, globals())
 
-web.config.session_parameters.timeout = 600
-web.config.session_parameters.ignore_expiry = False
+#web.config.session_parameters.timeout = 600
+#web.config.session_parameters.ignore_expiry = False
 if web.config.get('_session') is None:
     session = web.session.Session(app, web.session.DiskStore('sessions'), {'before': '/static/PhLab1.jpg', 'after': '/static/PhLab1.jpg'})
     web.config._session = session
