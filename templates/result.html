@@ -17,12 +17,6 @@ $def with (before, after, hidden)
         <div class="buttom_choose_file" style="text-align: center;">
             <a href="filters">Назад к выбору фильтра</a>
         </div>
-
-        <div class="buttom_choose_file" style="text-align: center;">
-            <a href="">Выберите файл
-                <input type='file' onchange="this.form.submit()" name="input_img" value="Выберите файл" /></a>
-        </div>
-
     </div>
 
 </header>
@@ -56,6 +50,10 @@ $def with (before, after, hidden)
         <form enctype="multipart/form-data" method="post" action="">
         <div class="row">
 
+            <div class="col-1-2">
+                <div class="buttom_choose_file" style="text-align: center;">
+                    <a href="">Выберите файл
+                    <input type='file' onchange="this.form.submit()" name="input_img" value="Выберите файл" /></a>
 
                     <!-- Script for FB button -->
                     <div id="fb-root"></div>
@@ -87,6 +85,7 @@ $def with (before, after, hidden)
                         </div>
                     </div>
 
+                </div>
             </div>
         </div>
 
