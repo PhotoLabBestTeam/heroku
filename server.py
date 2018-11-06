@@ -57,8 +57,8 @@ class result:
         fout.write(x.input_img.file.read())
         fout.close()
 
-        after = subprocess.check_output(["bash", "script.sh", filedir + '/' + filename, name])
         session['before'] = filedir + '/' + filename
+        after = subprocess.check_output(["bash", "script.sh", session['before'], name])
         if after.startswith('http'):
             session['after'] = after
         else:

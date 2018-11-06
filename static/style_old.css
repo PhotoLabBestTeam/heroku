@@ -21,7 +21,7 @@ div, img {
 
 }
 
-a {
+a, input {
     text-decoration: none;
     font-weight: bold;
     text-align: center;
@@ -127,7 +127,7 @@ nav li {
     vertical-align:top;
 }
 .menu-main li:last-child:after {content: none;}
-.menu-main a {
+.menu-main a, input {
     text-decoration: none;
     font-family: 'Ubuntu Condensed', sans-serif;
     letter-spacing: 2px;
@@ -177,7 +177,7 @@ nav li {
     }
 }*/
 
-.buttom_try_filter a {
+.buttom_try_filter a, input {
     text-decoration: none;
     outline: none;
     position: center;
@@ -201,7 +201,7 @@ nav li {
     background-position: 0 0;
 }
 
-.buttom_choose_file a {
+.buttom_choose_file a, input {
     position: center;
     text-decoration: none;
     outline: none;
