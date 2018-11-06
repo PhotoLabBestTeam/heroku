@@ -5,17 +5,17 @@ import os
 import os.path
 import time
 
-class MyDiskStore(web.session.DiskStore):
-    def cleanup(self, timeout):
-        now = time.time()
-        for f in os.listdir(self.root):
-            path = self._get_path(f)
-            atime = os.stat(path).st_atime
-            if now - atime > timeout :
-                os.remove(path)
-                img_path = 'static/session_imgs/' + path.split("/")[-1]
-                if os.path.isfile(img_path):
-                    os.remove(img_path)
+# class MyDiskStore(web.session.DiskStore):
+#     def cleanup(self, timeout):
+#         now = time.time()
+#         for f in os.listdir(self.root):
+#             path = self._get_path(f)
+#             atime = os.stat(path).st_atime
+#             if now - atime > timeout :
+#                 os.remove(path)
+#                 img_path = 'static/session_imgs/' + path.split("/")[-1]
+#                 if os.path.isfile(img_path):
+#                     os.remove(img_path)
 
 urls = (
     '/', 'index',
@@ -27,10 +27,10 @@ render = web.template.render('templates/')
 
 app = web.application(urls, globals())
 
-web.config.session_parameters.timeout = 600
-web.config.session_parameters.ignore_expiry = False
+#web.config.session_parameters.timeout = 600
+#web.config.session_parameters.ignore_expiry = False
 if web.config.get('_session') is None:
-    session = web.session.Session(app, MyDiskStore('sessions'), {'before': '/static/PhLab1.jpg', 'after': '/static/PhLab1.jpg'})
+    session = web.session.Session(app, web.session.DiskStore('sessions'), {'before': '/static/PhLab1.jpg', 'after': '/static/PhLab1.jpg'})
     web.config._session = session
 else:
     session = web.config._session
