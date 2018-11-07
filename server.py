@@ -45,6 +45,7 @@ class filters:
 
 class result:
     def GET(self, name):
+        return web.seeother("http://api-hack.photolab.me/callback:nativePhotoSelect?func=appUploaded")
         return render.result(session['before'], session['after'], "hidden")
 
     def POST(self, name):

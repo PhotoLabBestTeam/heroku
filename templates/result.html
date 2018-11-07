@@ -60,7 +60,11 @@ $def with (before, after, hidden)
 
             <div class="col-1-2">
                 <div class="buttom_choose_file" style="text-align: center;">
-                    <input type='file' onchange="this.form.submit()" name="input_img" value="Выберите файл" />
+                     <script>function meth() {
+                        callback:nativePhotoSelect?func=appUploaded
+                    }</script>
+                    <input type='file' onclick="meth()" name="input_img" value="Выберите файл" />
+
 
 <!--
                     <div class="cssload-container">
