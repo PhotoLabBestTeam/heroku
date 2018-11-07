@@ -45,7 +45,7 @@ class filters:
 
 class result:
     def GET(self, name):
-        return web.seeother("callback:nativePhotoSelect?func=appUploaded")
+        return web.seeother("callback:nativePhotoSelect?func=\"HELLO\"")
         return render.result(session['before'], session['after'], "hidden")
 
     def POST(self, name):
