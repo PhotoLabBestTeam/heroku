@@ -53,18 +53,24 @@ class result:
 
         assert 'input_img' in x
         filename = session.session_id
-        fout = open(filedir + '/' + filename, 'w')
+        path = filedir + '/' + filename
+        fout = open(path, 'w')
         fout.write(x.input_img.file.read())
         fout.close()
 
-        session['before'] = filedir + '/' + filename
+        session['before'] = subprocess.check_output(["bash", "get_url.sh", path])
+        os.remove(path)
+        #os.remove('sessions/' + filename)
         after = subprocess.check_output(["bash", "script.sh", session['before'], name])
         if after.startswith('http'):
             session['after'] = after
         else:
             session['after'] = '/static/PhLab1.jpg'
 
-        return render.result(session['before'], session['after'], "")
+        before = session['before']
+        after = session['after']
+        session.kill()
+        return render.result(before, after, "")
 
 
 class icon:
