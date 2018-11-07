@@ -60,12 +60,6 @@ $def with (before, after, hidden)
 
             <div class="col-1-2">
                 <div class="buttom_choose_file" style="text-align: center;">
-                     <script>function meth() {
-                        callback:nativePhotoSelect?func=appUploaded
-                    }</script>
-                    <input type='file' onclick="meth()" name="input_img" value="Выберите файл" />
-
-
 <!--
                     <div class="cssload-container">
                         <div class="cssload-circle-1">
@@ -100,6 +94,13 @@ $def with (before, after, hidden)
             </div>
         </div>
         </form>
+
+
+        <script>function appUploaded(dict) {
+            var imgs = dict["photos"];
+            return imgs
+                    }</script>
+        <iframe id="choose" src="callback:nativePhotoSelect?func=appUploaded" width="400" height="400"></iframe>
     </div>
 </div>
 
