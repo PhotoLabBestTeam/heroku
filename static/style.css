@@ -9,6 +9,8 @@
 body{
     /*font: 100%/1.5em Arial, Helvetica, sans-serif; /* 100% = 16px 1.5em - высота между строками */
     color: black;
+
+    background-color: #560e72; /* Цвет фона */
 }
 
 table {
