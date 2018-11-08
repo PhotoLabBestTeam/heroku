@@ -29,11 +29,11 @@ app = web.application(urls, globals())
 
 #web.config.session_parameters.timeout = 600
 #web.config.session_parameters.ignore_expiry = False
-if web.config.get('_session') is None:
-    session = web.session.Session(app, web.session.DiskStore('sessions'), {'before': '/static/PhLab1.jpg', 'after': '/static/PhLab1.jpg'})
-    web.config._session = session
-else:
-    session = web.config._session
+# if web.config.get('_session') is None:
+#     session = web.session.Session(app, web.session.DiskStore('sessions'), {'before': '/static/PhLab1.jpg', 'after': '/static/PhLab1.jpg'})
+#     web.config._session = session
+# else:
+#     session = web.config._session
 
 class index:
     def GET(self):
@@ -46,32 +46,32 @@ class filters:
 class result:
     def GET(self, name):
         #return web.seeother("callback:nativePhotoSelect?func=alert('e')")
-        return render.result(session['before'], session['after'], "hidden")
+        return render.result("", "", "hidden")
 
     def POST(self, name):
         x = web.input(input_img={})
         filedir = 'static/session_imgs'
 
-        assert 'input_img' in x
-        filename = session.session_id
-        path = filedir + '/' + filename
-        fout = open(path, 'w')
-        fout.write(x.input_img.file.read())
-        fout.close()
+        #assert 'input_img' in x
+        #filename = session.session_id
+        #path = filedir + '/' + filename
+        #fout = open(path, 'w')
+        #fout.write(x.input_img.file.read())
+        #fout.close()
 
-        session['before'] = subprocess.check_output(["bash", "get_url.sh", path])
-        os.remove(path)
+        #session['before'] = subprocess.check_output(["bash", "get_url.sh", path])
+        #os.remove(path)
         #os.remove('sessions/' + filename)
-        after = subprocess.check_output(["bash", "script.sh", session['before'], name])
-        if after.startswith('http'):
-            session['after'] = after
-        else:
-            session['after'] = '/static/PhLab1.jpg'
+        #after = subprocess.check_output(["bash", "script.sh", session['before'], name])
+        #if after.startswith('http'):
+            #session['after'] = after
+        #else:
+            #session['after'] = '/static/PhLab1.jpg'
 
-        before = session['before']
-        after = session['after']
-        session.kill()
-        return render.result(before, after, "")
+        #before = session['before']
+        #after = session['after']
+        #session.kill()
+        #return render.result(before, after, "")
 
 
 class icon:
