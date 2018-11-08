@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang=“en”>
+
+<body>
+
+<a id="lnk" href=javascript:test()>Select Photo</a>
+
+<script>
+    function test() {
+        window.location='callback:nativePhotoSelect?func=photoSelected'
+    }
+</script>
+
+<script>
+ function photoSelected( result ) {
+ document.getElementById("lnk").innerHTML = "<a href=https://github.com/>CLOSE</a>";
+  //result
+ }
+</script>
+
+</body>
+</html>

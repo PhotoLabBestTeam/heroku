@@ -39,8 +39,6 @@ else:
 class index:
     count = 0
     def GET(self):
-        #index.count += 1
-        #if index.count <= 5:
         return render.index()
 
 class filters:
@@ -50,6 +48,7 @@ class filters:
 class result:
     def GET(self, name):
         #return web.seeother("callback:nativePhotoSelect?func=alert('e')")
+        session['name'] = name
         return render.result(session['before'], session['after'], "hidden")
 
     def POST(self, name):

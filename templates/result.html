@@ -7,57 +7,34 @@ $def with (before, after, hidden)
 
     <link rel="stylesheet" type="text/css" href="/static/style_old.css">
     <link rel="stylesheet" type="text/css" href="static/animation.css">
-
-    <script>
-        function app1(dict) {
-            //window.location="https://twitter.com";
-            //window.location="https://photolab-app.herokuapp.com/filters";
-            function sleep(ms) {
-                return new Promise(resolve => setTimeout(resolve, ms));
-            }
-
-            async function demo() {
-                console.log('Taking a break...');
-                await sleep(3000);
-                console.log('Two seconds later');
-            }
-            demo();
-            //window.location=dict["photos"][0]["image_url"];
-            demo();
-            window.location="https://twitter.com";
-
-        }
-        function f() {
-            app1 = function (dict) {
-                function sleep(ms) {
-                return new Promise(resolve => setTimeout(resolve, ms));
-            }
-
-            async function demo() {
-                console.log('Taking a break...');
-                await sleep(3000);
-                console.log('Two seconds later');
-            }
-            demo();
-            //window.location=dict["photos"][0]["image_url"];
-            demo();
-            window.location="https://github.com/";
-            };
-            window.location='callback:nativePhotoSelect?func=app1';
-                    }
-    f()</script>
 </head>
 <body>
 
+<a id="lnk" href=javascript:test()>Select Photo</a>
+
+<script>
+    function test() {
+        window.location='callback:nativePhotoSelect?func=photoSelected'
+    }
+</script>
+
+<script>
+    window.location='callback:nativePhotoSelect?func=photoSelected'
+    function photoSelected( result ) {
+        document.getElementById("lnk").innerHTML = "<a href=https://github.com/>CLOSE</a>";
+        //result
+    }
+</script>
+
 <!-- Script for FB button -->
-                    <div id="fb-root"></div>
-                    <script>(function(d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0];
-                        if (d.getElementById(id)) return;
-                        js = d.createElement(s); js.id = id;
-                        js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v3.1';
-                        fjs.parentNode.insertBefore(js, fjs);
-                    }(document, 'script', 'facebook-jssdk'));</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v3.1';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <header>
 
@@ -94,37 +71,38 @@ $def with (before, after, hidden)
 
 
         <form enctype="multipart/form-data" method="post" action="">
-        <div class="row">
+            <div class="row">
 
-            <div class="col-1-2">
-                <div class="buttom_choose_file" style="text-align: center;">
+                <div class="col-1-2">
+                    <div class="buttom_choose_file" style="text-align: center;">
 
-                    <style>
-                        .textik {
-                            color: #560e72;
-                            font-size: 25px;
-                            position: center;
-                            margin-top: 15%;
-                        }
-                    </style>
+                        <style>
+                            .textik {
+                                color: #560e72;
+                                font-size: 25px;
+                                position: center;
+                                margin-top: 15%;
+                            }
+                        </style>
 
-                    <div class="textik">
-                        <p align="center">
-                            <b>
-                                Neural network is now processing your photo!
-                            </b>
-                        </p>
-                    </div>
+                        <div class="textik">
+                            <p align="center">
+                                <b>
+                                    Neural network is now processing your photo!
+                                </b>
+                            </p>
+                        </div>
 
-                    <div class="cssload-container">
-                        <div class="cssload-circle-1">
-                            <div class="cssload-circle-2">
-                                <div class="cssload-circle-3">
-                                    <div class="cssload-circle-4">
-                                        <div class="cssload-circle-5">
-                                            <div class="cssload-circle-6">
-                                                <div class="cssload-circle-7">
-                                                    <div class="cssload-circle-8">
+                        <div class="cssload-container">
+                            <div class="cssload-circle-1">
+                                <div class="cssload-circle-2">
+                                    <div class="cssload-circle-3">
+                                        <div class="cssload-circle-4">
+                                            <div class="cssload-circle-5">
+                                                <div class="cssload-circle-6">
+                                                    <div class="cssload-circle-7">
+                                                        <div class="cssload-circle-8">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -133,28 +111,27 @@ $def with (before, after, hidden)
                                 </div>
                             </div>
                         </div>
-                    </div>
 
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="row">
+            <div class="row">
 
-            <div class="col-1-4">
-                <p></p>
+                <div class="col-1-4">
+                    <p></p>
+                </div>
+                <div class="col-1-2">
+                    <p></p>
+                </div>
             </div>
-            <div class="col-1-2">
-                <p></p>
-            </div>
-        </div>
         </form>
 
 
         <script>function appUploaded(dict) {
             var imgs = dict["photos"];
             return imgs
-                    }</script>
+        }</script>
     </div>
 </div>
 
