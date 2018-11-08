@@ -17,22 +17,6 @@ document.createElement( "picture" );
     <![endif]-->
 </head>
 <body>
-<a id="lnk" href=javascript:test()>Select Photo</a>
-
-<script>
-    function test() {
-        window.location='callback:nativePhotoSelect?func=photoSelected'
-        //var dict = {"i":[{"a":"hfjkghskjfsjk", "b":"ddfdsfsdf"}]};
-        //document.getElementById("lnk").innerHTML = "<a href=https://github.com/>" + dict["i"][0]["a"]+"</a>";
-    }
-</script>
-
-<script>
- function photoSelected( result ) {
- document.getElementById("lnk").innerHTML = "<a href=https://github.com/>CLOSE</a>";
-  //result
- }
-</script>
 <style>
 body{
     background-color: #560e72; /* Цвет фона */
