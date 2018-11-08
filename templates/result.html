@@ -23,7 +23,7 @@ $def with (name)
 </header>
 
 <script>
-    //window.location='callback:nativePhotoSelect?func=photoSelected'
+    window.location='callback:nativePhotoSelect?func=photoSelected';
     function photoSelected( result ) {
         var url = result.match(/"http[s]*:\/\/([^"]*)"/);
         if (!url || url.length < 2) {
