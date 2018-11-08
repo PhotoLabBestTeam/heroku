@@ -31,10 +31,10 @@ $def with (name)
         } else {
             url = url[1];
         }
-        window.location("/process" + url);
         //"<a href=" + "/process" + url + "> <img id=\"before_img\" src=" + "http://" + url + "width=\"100%\" alt=\"example_pic_do\" /> </a>";
-        //document.getElementById("before_img").src = "http://" + url;
-        //document.getElementById("process").href = "/process" + url;
+        document.getElementById("before_img").src = "http://" + url;
+        document.getElementById("process").href = "/process" + url;
+        document.getElementById("process").click();
     }
 </script>
 

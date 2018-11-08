@@ -56,6 +56,7 @@ class result:
 
 class process:
     def GET(self, url):
+        render.process("", "", "")
         url = "http://" + url
         after = subprocess.check_output(["bash", "script.sh", url, session['name']])
         if not after.startswith('http'):
