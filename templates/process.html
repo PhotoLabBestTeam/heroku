@@ -11,7 +11,7 @@ $def with (before, after, hidden, hidden_process, process)
 <body>
 
 <script>
-    if (!$process) {
+    if ($process == false) {
         window.location="callback:nativeShare?og_image=" + $after + "&og_title=Мега%20Фото&og_description=Расшарьте%20пожалуйста%21&func=share";
     }
     function share(shared) {
