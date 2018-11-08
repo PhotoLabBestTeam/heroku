@@ -41,7 +41,7 @@ class index:
     def GET(self):
         if session['select']:
             session['select'] = False
-            return render.result1(session['before'], session['after'], "hidden", session['name'])
+            return render.result(session['name'])
         return render.index()
 
 class filters:
@@ -50,10 +50,8 @@ class filters:
 
 class result:
     def GET(self, name):
-        #return web.seeother("callback:nativePhotoSelect?func=alert('e')")
         session['name'] = name
         session['select'] = True
-        #return render.result(session['before'], session['after'], "hidden")
         return web.seeother('/')
 
 class process:
@@ -62,7 +60,7 @@ class process:
         after = subprocess.check_output(["bash", "script.sh", url, session['name']])
         if not after.startswith('http'):
             after = '/static/PhLab1.jpg'
-        return render.result(url, after, "")
+        return render.process(url, after, "")
 
 
 class icon:

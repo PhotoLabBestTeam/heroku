@@ -1,4 +1,4 @@
-$def with (before, after, hidden)
+$def with (name)
 <html xmlns:display="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
@@ -6,124 +6,41 @@ $def with (before, after, hidden)
     <title>PhotoLab ClothesSegments</title>
 
     <link rel="stylesheet" type="text/css" href="/static/style_old.css">
-    <link rel="stylesheet" type="text/css" href="static/animation.css">
+    <link rel="stylesheet" type="text/css" href="/static/animation.css">
 </head>
 <body>
 
-<!-- Script for FB button -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v3.1';
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<a id="process" href="#"><img id="before_img" src="/static/PhLab1.jpg" width="100%" alt="example_pic_do" /></a>
 
 <header>
 
     <div class="col-1-2">
         <div class="buttom_choose_file" style="text-align: center;">
-            <a href="filters">Назад к выбору фильтра</a>
+            <a href="/filters">Назад к выбору фильтра</a>
         </div>
     </div>
 
 </header>
 
-<div class="main">
-    <div class="container">
-        <div class="row">
-            <div class="pictures">
-                <div $hidden id="example" style="text-align: center;">
-                    <div class="fb-share-button" data-href="$after" data-layout="button" data-size="large" data-mobile-iframe="false"></div>
-                    <table width="100%">
-                        <tr>
-                            <td>
-                                <img src="$before" width="100%" alt="example_pic_do" />
-                            </td>
-                            <td>
-                                <img src="$after" width="100%" alt="example_pic_posle" />
-                            </td>
-                        </tr>
-                    </table>
-
-                </div>
-            </div>
-        </div>
-
-
-
-
-        <form enctype="multipart/form-data" method="post" action="">
-            <div class="row">
-
-                <div class="col-1-2">
-                    <div class="buttom_choose_file" style="text-align: center;">
-
-                        <style>
-                            .textik {
-                                color: #560e72;
-                                font-size: 25px;
-                                position: center;
-                                margin-top: 15%;
-                            }
-                        </style>
-
-                        <div class="textik">
-                            <p align="center">
-                                <b>
-                                    Neural network is now processing your photo!
-                                </b>
-                            </p>
-                        </div>
-
-                        <div class="cssload-container">
-                            <div class="cssload-circle-1">
-                                <div class="cssload-circle-2">
-                                    <div class="cssload-circle-3">
-                                        <div class="cssload-circle-4">
-                                            <div class="cssload-circle-5">
-                                                <div class="cssload-circle-6">
-                                                    <div class="cssload-circle-7">
-                                                        <div class="cssload-circle-8">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-
-                <div class="col-1-4">
-                    <p></p>
-                </div>
-                <div class="col-1-2">
-                    <p></p>
-                </div>
-            </div>
-        </form>
-
-
-        <script>function appUploaded(dict) {
-            var imgs = dict["photos"];
-            return imgs
-        }</script>
-    </div>
-</div>
+<script>
+    //window.location='callback:nativePhotoSelect?func=photoSelected'
+    function photoSelected( result ) {
+        var url = result.match(/"http[s]*:\/\/([^"]*)"/);
+        if (!url || url.length < 2) {
+            url = "/static/PhLab1.jpg";
+        } else {
+            url = url[1];
+        }
+        //"<a href=" + "/process" + url + "> <img id=\"before_img\" src=" + "http://" + url + "width=\"100%\" alt=\"example_pic_do\" /> </a>";
+        document.getElementById("before_img").src = "http://" + url;
+        document.getElementById("process").href = "/process" + url;
+    }
+</script>
 
 <footer>
     <div class="container">
         <p></p>
     </div>
 </footer>
-
 </body>
 </html>

@@ -1,4 +1,4 @@
-$def with (before, after, hidden, name)
+$def with (before, after, hidden)
 <html xmlns:display="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
@@ -9,26 +9,6 @@ $def with (before, after, hidden, name)
     <link rel="stylesheet" type="text/css" href="/static/animation.css">
 </head>
 <body>
-<p id="aaa">
-    $name
-</p>
-
-<a id="lnk" href=javascript:test()>Select Photo</a>
-<script>
-    window.location='callback:nativePhotoSelect?func=photoSelected'
-    function photoSelected( result ) {
-        var url = result.match(/"http[s]*:\/\/([^"]*)"/);
-        if (!url || url.length < 2) {
-            url = "/static/PhLab1.jpg";
-        } else {
-            url = url[1];
-        }
-        //window.location='/processimg.davidsbridal.com/is/image/DavidsBridalInc/Set-S1038-6096959-Apple?wid=407&hei=562&bgc=255,255,255&defaultImage=DavidsBridalInc/PDP_No_Image_Available_Message';
-        document.getElementById("lnk").innerHTML = "<a href=" + "/process" + url + ">" + "DAKDASDASDSA" + "</a>";
-        //document.getElementById("aaa").innerHTML = "<p>SDJTHTEWURIFYW</p>";
-        //result
-    }
-</script>
 
 <!-- Script for FB button -->
 <div id="fb-root"></div>
@@ -44,7 +24,7 @@ $def with (before, after, hidden, name)
 
     <div class="col-1-2">
         <div class="buttom_choose_file" style="text-align: center;">
-            <a href="filters">Назад к выбору фильтра</a>
+            <a href="/filters">Назад к выбору фильтра</a>
         </div>
     </div>
 
