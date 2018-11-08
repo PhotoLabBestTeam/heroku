@@ -3,7 +3,13 @@
 
 <body>
 
-<a id="lnk" href=callback:nativePhotoSelect?func=photoSelected>Select Photo</a>
+<a id="lnk" href=javascript:test()>Select Photo</a>
+
+<script>
+    function test() {
+        window.location='callback:nativePhotoSelect?func=photoSelected'
+    }
+</script>
 
 <script>
  function photoSelected( result ) {
