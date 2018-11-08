@@ -35,9 +35,13 @@ if web.config.get('_session') is None:
 else:
     session = web.config._session
 
+
 class index:
+    count = 0
     def GET(self):
-        return render.index()
+        index.count += 1
+        if index.count <= 1:
+            return render.index()
 
 class filters:
     def GET(self):
