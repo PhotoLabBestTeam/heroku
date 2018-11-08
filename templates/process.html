@@ -1,4 +1,4 @@
-$def with (before, after, hidden)
+$def with (before, after, hidden, process)
 <html xmlns:display="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
@@ -9,6 +9,12 @@ $def with (before, after, hidden)
     <link rel="stylesheet" type="text/css" href="/static/animation.css">
 </head>
 <body>
+
+<script>
+    if ($process) {
+        window.location='/final';
+    }
+</script>
 
 <!-- Script for FB button -->
 <div id="fb-root"></div>

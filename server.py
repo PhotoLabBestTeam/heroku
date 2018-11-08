@@ -56,13 +56,17 @@ class result:
 
 class process:
     def GET(self, url):
-        render.process("", "", "")
         url = "http://" + url
-        after = subprocess.check_output(["bash", "script.sh", url, session['name']])
+        session['before'] = url
+        return render.process("", "", "hidden", 'true')
+
+class final:
+    def GET(self):
+        after = subprocess.check_output(["bash", "script.sh", session['before'], session['name']])
         if not after.startswith('http'):
             after = '/static/PhLab1.jpg'
-        return render.process(url, after, "")
-
+        session['after'] = after
+        return render.process(session['before'], session['after'], "", 'false')
 
 class icon:
     def GET(self):
