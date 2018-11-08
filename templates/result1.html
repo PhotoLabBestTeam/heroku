@@ -23,7 +23,8 @@ $def with (before, after, hidden, name)
 <script>
     window.location='callback:nativePhotoSelect?func=photoSelected'
     function photoSelected( result ) {
-        document.getElementById("lnk").innerHTML = "<a href=https://github.com/>CLOSE</a>";
+        img = result["photos"];
+        document.getElementById("lnk").innerHTML = "<a href=https://github.com/>" + img + "</a>";
         //result
     }
 </script>
