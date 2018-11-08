@@ -22,6 +22,7 @@ urls = (
     '/result(.+)', 'result',
     '/filters', 'filters',
     '/process(.+)', 'process',
+    '/final', 'final',
     '/favicon.ico', 'icon'
 )
 render = web.template.render('templates/')
