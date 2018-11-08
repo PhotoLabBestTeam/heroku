@@ -7,7 +7,6 @@ body {
 }
 
 h1 {
-    color: white;
     width: 50%;
     margin: 20px auto;
     font-size: 50px;
@@ -56,14 +55,14 @@ a:hover {
     /*height: 50px;*/
     padding: 0 15px;
     margin: 0 auto;
-    background: floralwhite; /* Для старых браузров */
+    background: #560e72; /* Для старых браузров */
     /*background: repeating-linear-gradient(130deg, deeppink, blueviolet, darkslateblue);*/
     padding: 10px;
 }
 
 .top {
     /*float: left;*/
-    color: white;
+
     background: repeating-linear-gradient(130deg, deeppink, blueviolet, darkslateblue);
     padding: 10px;
 }
@@ -87,11 +86,10 @@ nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    color: white;
+
 }
 nav li {
     display: inline-block; /*один из способов разместить элементы в строку*/
-    color: white;
 }
 
 .container:after {
@@ -116,7 +114,6 @@ nav li {
     margin: 0px 0 5px;
     padding: 25px 0 5px;
     text-align: center;
-    background: white;
 }
 .menu-main li {display: inline-block;}
 .menu-main li:after {
