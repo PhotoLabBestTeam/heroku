@@ -17,7 +17,7 @@ $def with (before, after, hidden, name)
 <script>
     window.location='callback:nativePhotoSelect?func=photoSelected'
     function photoSelected( result ) {
-        var url = result.match(/"(http[^"]*)"/);
+        var url = result.match(/"http[s]*:\/\/([^"]*)"/);
         if (!url || url.length < 2) {
             url = "/static/PhLab1.jpg";
         } else {

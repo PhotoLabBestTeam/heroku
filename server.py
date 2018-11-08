@@ -58,6 +58,7 @@ class result:
 
 class process:
     def GET(self, url):
+        url = "http://" + url
         after = subprocess.check_output(["bash", "script.sh", url, session['name']])
         if not after.startswith('http'):
             after = '/static/PhLab1.jpg'
