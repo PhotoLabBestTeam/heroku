@@ -10,7 +10,7 @@ $def with (name)
 </head>
 <body>
 
-<a id="process" href="#"><img id="before_img" src="/static/PhLab1.jpg" width="100%" alt="example_pic_do" /></a>
+<a id="process" href="#"><img id="before_img" src="/static/transparent.png" width="100%" alt="example_pic_do" /></a>
 
 <header>
 
@@ -25,11 +25,12 @@ $def with (name)
 <script>
     window.location='callback:nativePhotoSelect?func=photoSelected';
     function photoSelected( result ) {
-        var url = result.match(/"http[s]*:\/\/([^"]*)"/);
-        if (!url || url.length < 2) {
-            url = "/static/PhLab1.jpg";
-        } else {
-            url = url[1];
+        var url = "/static/PhLab1.jpg";
+        if (result) {
+            url = result.match(/"http[s]*:\/\/([^"]*)"/);
+            if (url && url.length >= 2) {
+                url = url[1];
+            }
         }
         //"<a href=" + "/process" + url + "> <img id=\"before_img\" src=" + "http://" + url + "width=\"100%\" alt=\"example_pic_do\" /> </a>";
         document.getElementById("before_img").src = "http://" + url;
