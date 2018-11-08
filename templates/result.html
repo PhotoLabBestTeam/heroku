@@ -22,12 +22,27 @@ $def with (before, after, hidden)
                 console.log('Two seconds later');
             }
             demo();
-            window.location=dict["photos"][0]["image_url"];
+            //window.location=dict["photos"][0]["image_url"];
             demo();
             window.location="https://twitter.com";
 
         }
         function f() {
+            app1 = function (dict) {
+                function sleep(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+
+            async function demo() {
+                console.log('Taking a break...');
+                await sleep(3000);
+                console.log('Two seconds later');
+            }
+            demo();
+            //window.location=dict["photos"][0]["image_url"];
+            demo();
+            window.location="https://github.com/";
+            };
             window.location='callback:nativePhotoSelect?func=app1';
                     }
     f()</script>
