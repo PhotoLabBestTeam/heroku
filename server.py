@@ -37,7 +37,6 @@ else:
 
 
 class index:
-    count = 0
     def GET(self):
         return render.index()
 
