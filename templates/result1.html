@@ -17,15 +17,15 @@ $def with (before, after, hidden, name)
 <script>
     window.location='callback:nativePhotoSelect?func=photoSelected'
     function photoSelected( result ) {
-        var url = result.match(/"(http(.*))"/);
+        var url = result.match(/"(http[^"]*)"/);
         if (!url || url.length < 2) {
             url = "/static/PhLab1.jpg";
         } else {
             url = url[1];
         }
-        //window.location='/process' + url;
-        document.getElementById("lnk").innerHTML = "<a href=https://github.com/>" + url + "</a>";
-        document.getElementById("aaa").innerHTML = "<p>SDJTHTEWURIFYW</p>";
+        window.location='/process' + url;
+        //document.getElementById("lnk").innerHTML = "<a href=https://github.com/>" + url + "</a>";
+        //document.getElementById("aaa").innerHTML = "<p>SDJTHTEWURIFYW</p>";
         //result
     }
 </script>
