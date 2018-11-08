@@ -3,11 +3,11 @@
 
 <body>
 
-<a href=callback:nativePhotoSelect?func=photoSelected>Select Photo</a>
+<a id="lnk" href=callback:nativePhotoSelect?func=photoSelected>Select Photo</a>
 
 <script type=“text/javascript”>
  function photoSelected( result ) {
- window.location="https://twitter.com";
+ document.getElementById("lnk").innerHTML = "<a href=https://github.com/>CLOSE</a>";
   //result
  }
 </script>
