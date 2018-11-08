@@ -39,9 +39,9 @@ else:
 class index:
     count = 0
     def GET(self):
-        index.count += 1
-        if index.count <= 5:
-            return render.index()
+        #index.count += 1
+        #if index.count <= 5:
+        return render.index()
 
 class filters:
     def GET(self):
