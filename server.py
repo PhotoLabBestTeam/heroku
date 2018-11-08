@@ -59,7 +59,7 @@ class process:
     def GET(self, url):
         url = "http://" + url
         session['before'] = url
-        return render.process("", "", "hidden", 'true')
+        return render.process("", "", "hidden", "", 'true')
 
 class final:
     def GET(self):
@@ -67,7 +67,7 @@ class final:
         if not after.startswith('http'):
             after = '/static/PhLab1.jpg'
         session['after'] = after
-        return render.process(session['before'], session['after'], "", 'false')
+        return render.process(session['before'], session['after'], "", "hidden" 'false')
 
 class icon:
     def GET(self):

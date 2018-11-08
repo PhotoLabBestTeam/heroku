@@ -1,4 +1,4 @@
-$def with (before, after, hidden, process)
+$def with (before, after, hidden, hidden_process, process)
 <html xmlns:display="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
@@ -54,8 +54,7 @@ $def with (before, after, hidden, process)
 
 
 
-        <form enctype="multipart/form-data" method="post" action="">
-            <div class="row">
+            <div $hidden_process class="row">
 
                 <div class="col-1-2">
                     <div class="buttom_choose_file" style="text-align: center;">
@@ -109,7 +108,6 @@ $def with (before, after, hidden, process)
                     <p></p>
                 </div>
             </div>
-        </form>
     </div>
 </div>
 
