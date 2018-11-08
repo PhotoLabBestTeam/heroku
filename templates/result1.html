@@ -15,16 +15,10 @@ $def with (before, after, hidden, name)
 
 <a id="lnk" href=javascript:test()>Select Photo</a>
 <script>
-    function test() {
-        window.location='callback:nativePhotoSelect?func=photoSelected'
-    }
-</script>
-
-<script>
     window.location='callback:nativePhotoSelect?func=photoSelected'
     function photoSelected( result ) {
         const img = result["photos"][0]["a"];
-        document.getElementById("lnk").innerHTML = "<a href=https://github.com/>" + typeof img + "</a>";
+        document.getElementById("lnk").innerHTML = "<a href=https://github.com/>" + "AAAAA" + "</a>";
         //result
     }
 </script>
