@@ -10,22 +10,6 @@ $def with (before, after, hidden)
 </head>
 <body>
 
-<a id="lnk" href=javascript:test()>Select Photo</a>
-
-<script>
-    function test() {
-        window.location='callback:nativePhotoSelect?func=photoSelected'
-    }
-</script>
-
-<script>
-    window.location='callback:nativePhotoSelect?func=photoSelected'
-    function photoSelected( result ) {
-        document.getElementById("lnk").innerHTML = "<a href=https://github.com/>CLOSE</a>";
-        //result
-    }
-</script>
-
 <!-- Script for FB button -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {

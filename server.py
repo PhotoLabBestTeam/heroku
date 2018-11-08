@@ -21,6 +21,7 @@ urls = (
     '/', 'index',
     '/result(.+)', 'result',
     '/filters', 'filters',
+    '/process(.+)', 'process',
     '/favicon.ico', 'icon'
 )
 render = web.template.render('templates/')
@@ -55,30 +56,12 @@ class result:
         #return render.result(session['before'], session['after'], "hidden")
         return web.seeother('/')
 
-    def POST(self, name):
-        x = web.input(input_img={})
-        filedir = 'static/session_imgs'
-
-        #assert 'input_img' in x
-        #filename = session.session_id
-        #path = filedir + '/' + filename
-        #fout = open(path, 'w')
-        #fout.write(x.input_img.file.read())
-        #fout.close()
-
-        #session['before'] = subprocess.check_output(["bash", "get_url.sh", path])
-        #os.remove(path)
-        #os.remove('sessions/' + filename)
-        #after = subprocess.check_output(["bash", "script.sh", session['before'], name])
-        #if after.startswith('http'):
-            #session['after'] = after
-        #else:
-            #session['after'] = '/static/PhLab1.jpg'
-
-        #before = session['before']
-        #after = session['after']
-        #session.kill()
-        #return render.result(before, after, "")
+class process:
+    def GET(self, url):
+        after = subprocess.check_output(["bash", "script.sh", url, session['name']])
+        if not after.startswith('http'):
+            after = '/static/PhLab1.jpg'
+        return render.result(url, after, "")
 
 
 class icon:
