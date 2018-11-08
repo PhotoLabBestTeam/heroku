@@ -40,7 +40,7 @@ class index:
     count = 0
     def GET(self):
         index.count += 1
-        if index.count <= 1:
+        if index.count <= 5:
             return render.index()
 
 class filters:
