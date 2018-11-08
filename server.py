@@ -30,7 +30,7 @@ app = web.application(urls, globals())
 #web.config.session_parameters.timeout = 600
 #web.config.session_parameters.ignore_expiry = False
 if web.config.get('_session') is None:
-    session = web.session.Session(app, web.session.DiskStore('sessions'), {'name': '', 'before': '/static/PhLab1.jpg', 'after': '/static/PhLab1.jpg'})
+    session = web.session.Session(app, web.session.DiskStore('sessions'), {'select': False, 'name': '', 'before': '/static/PhLab1.jpg', 'after': '/static/PhLab1.jpg'})
     web.config._session = session
 else:
     session = web.config._session
@@ -38,7 +38,8 @@ else:
 
 class index:
     def GET(self):
-        if session['name'] != '':
+        if session['select']:
+            session['select'] = False
             return render.result1(session['before'], session['after'], "hidden", session['name'])
         return render.index()
 
@@ -50,6 +51,7 @@ class result:
     def GET(self, name):
         #return web.seeother("callback:nativePhotoSelect?func=alert('e')")
         session['name'] = name
+        session['select'] = True
         #return render.result(session['before'], session['after'], "hidden")
         return web.seeother('/')
 
