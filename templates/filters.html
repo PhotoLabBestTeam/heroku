@@ -17,6 +17,20 @@
     <![endif]-->
 </head>
 <body>
+<a id="lnk" href=javascript:test()>Select Photo</a>
+
+<script>
+    function test() {
+        window.location='callback:nativePhotoSelect?func=photoSelected'
+    }
+</script>
+
+<script>
+ function photoSelected( result ) {
+ document.getElementById("lnk").innerHTML = "<a href=https://github.com/>CLOSE</a>";
+  //result
+ }
+</script>
 <div class="container">
     <div class="row">
         <div class="cols col-12">
