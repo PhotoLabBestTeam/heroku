@@ -13,8 +13,13 @@ $def with (before, after, hidden)
             window.location="https://www.google.ru/";
         }
         function f(dict) {
-            window.location='callback:nativePhotoSelect?func=f';
-            window.location="https://www.google.ru/";
+            function app() {
+                window.location="https://www.google.ru/";
+            }
+            window.location='callback:nativePhotoSelect?func=app';
+            if (dict != null) {
+                 window.location="https://www.google.ru/";
+            }
             //var imgs = dict["photos"];
             //return imgs
                     }
