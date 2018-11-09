@@ -30,12 +30,8 @@ $def with (name)
         //"<a href=" + "/process" + url + "> <img id=\"before_img\" src=" + "http://" + url + "width=\"100%\" alt=\"example_pic_do\" /> </a>";
         document.getElementById("before_img").src = "http://" + url;
         document.getElementById("process").href = "/process" + url;
-        window.location="/process" + url;
-        window.location="/process" + url;
-        window.location="/process" + url;
-        window.location="/process" + url;
-        window.location="/process" + url;
-        document.getElementById("process").click();
+        setTimeout(function(){document.getElementById("process").click();}, 3000);
+        //document.getElementById("process").click();
     }
 </script>
 
